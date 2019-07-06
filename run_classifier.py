@@ -331,6 +331,17 @@ class MnliMatchedProcessor(GLUEProcessor):
 
   def get_labels(self):
     return ["contradiction", "entailment", "neutral"]
+class MultilingualProcessor(GLUEProcessor):
+  def __init__(self):
+    super(MultilingualProcessor,self).__init__()
+    self.dev_file = "dev.tsv"
+    self.test_file = "test.tsv"
+    self.label_column = 0
+    self.text_a_column = 1
+    self.text_b_column = 2
+  def get_labels(self):
+    return ["contradiction", "entailment", "neutral"]
+	
 
 
 class MnliMismatchedProcessor(MnliMatchedProcessor):
@@ -650,7 +661,8 @@ def main(_):
       "mnli_mismatched": MnliMismatchedProcessor,
       'sts-b': StsbProcessor,
       'imdb': ImdbProcessor,
-      "yelp5": Yelp5Processor
+      "yelp5": Yelp5Processo,
+      "multi":MultilingualProcessor
   }
 
   if not FLAGS.do_train and not FLAGS.do_eval and not FLAGS.do_predict:
