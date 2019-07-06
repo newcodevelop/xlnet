@@ -661,7 +661,7 @@ def main(_):
       "mnli_mismatched": MnliMismatchedProcessor,
       'sts-b': StsbProcessor,
       'imdb': ImdbProcessor,
-      "yelp5": Yelp5Processo,
+      "yelp5": Yelp5Processor,
       "multi":MultilingualProcessor
   }
 
