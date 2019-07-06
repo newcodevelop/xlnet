@@ -74,6 +74,7 @@ def convert_single_example(ex_index, example, label_list, max_seq_length,
     label_map = {}
     print(label_list)#changed
     for (i, label) in enumerate(label_list):
+      print(i,label)#changed
       label_map[label] = i
 
   tokens_a = tokenize_fn(example.text_a)
