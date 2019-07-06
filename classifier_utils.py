@@ -72,6 +72,7 @@ def convert_single_example(ex_index, example, label_list, max_seq_length,
 
   if label_list is not None:
     label_map = {}
+    print(label_list)#changed
     for (i, label) in enumerate(label_list):
       label_map[label] = i
 
