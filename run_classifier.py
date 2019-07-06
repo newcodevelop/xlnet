@@ -336,9 +336,9 @@ class MultilingualProcessor(GLUEProcessor):
     super(MultilingualProcessor,self).__init__()
     self.dev_file = "dev.tsv"
     self.test_file = "test.tsv"
-    self.label_column = 0
-    self.text_a_column = 1
-    self.text_b_column = 2
+    self.label_column = 1
+    self.text_a_column = 2
+    self.text_b_column = 3
   def get_labels(self):
     return ["contradiction", "entailment", "neutral"]
 	
